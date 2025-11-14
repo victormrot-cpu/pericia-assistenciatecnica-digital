@@ -25,45 +25,45 @@ const Hero = () => {
           }} />
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-primary to-yellow-400 bg-clip-text text-transparent mb-6 leading-tight drop-shadow-lg">
             Perícia Judicial e Assistência Técnica
           </h1>
           
-          <h2 className="text-2xl md:text-3xl text-white font-light mb-8">
+          <h2 className="text-2xl md:text-3xl text-white font-light mb-6">
             Engenharia Civil e Segurança do Trabalho
           </h2>
           
-          <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed mb-8">
             Especialista em perícias judiciais, assistência técnica e avaliações imobiliárias. 
             Atendimento profissional com laudos técnicos precisos e fundamentados.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button variant="hero" size="lg" className="text-lg px-8 py-6" onClick={scrollToContact}>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
+            <Button variant="hero" size="lg" className="text-lg px-10 py-7 animate-pulse shadow-2xl shadow-primary/50 hover:shadow-primary/70 hover:scale-105 transition-all" onClick={scrollToContact}>
               Solicite um Orçamento
             </Button>
-            <Button variant="hero-outline" size="lg" className="text-lg px-8 py-6" onClick={() => document.getElementById('servicos')?.scrollIntoView({
+            <Button variant="hero-outline" size="lg" className="text-lg px-10 py-7 hover:scale-105 transition-all" onClick={() => document.getElementById('servicos')?.scrollIntoView({
             behavior: 'smooth'
           })}>
               Conheça os Serviços
             </Button>
           </div>
 
-          <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
-            <div className="bg-secondary/20 backdrop-blur-sm p-6 rounded-lg border border-primary/30">
-              <p className="text-3xl font-bold text-primary mb-2">4</p>
-              <p className="text-sm">Tribunais Cadastrados</p>
-              <p className="text-xs text-gray-300 mt-1">TJRJ, TJSP, TJES, JFRJ</p>
+          <div className="pt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border-2 border-primary/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white/15">
+              <p className="text-5xl font-bold text-primary mb-3 drop-shadow-lg">4</p>
+              <p className="text-base font-semibold">Tribunais Cadastrados</p>
+              <p className="text-xs text-gray-200 mt-2 font-medium">TJRJ, TJSP, TJES, JFRJ</p>
             </div>
-            <div className="bg-secondary/20 backdrop-blur-sm p-6 rounded-lg border border-primary/30">
-              <p className="text-3xl font-bold text-primary mb-2">3</p>
-              <p className="text-sm">Estados de Atuação</p>
-              <p className="text-xs text-gray-300 mt-1">Rio de Janeiro, São Paulo, Espírito Santo</p>
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border-2 border-primary/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white/15">
+              <p className="text-5xl font-bold text-primary mb-3 drop-shadow-lg">3</p>
+              <p className="text-base font-semibold">Estados de Atuação</p>
+              <p className="text-xs text-gray-200 mt-2 font-medium">Rio de Janeiro, São Paulo, Espírito Santo</p>
             </div>
-            <div className="bg-secondary/20 backdrop-blur-sm p-6 rounded-lg border border-primary/30">
-              <p className="text-3xl font-bold text-primary mb-2">2</p>
-              <p className="text-sm">Especialidades em Engenharia</p>
-              <p className="text-xs text-gray-300 mt-1">Civil e Segurança do Trabalho</p>
+            <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border-2 border-primary/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white/15">
+              <p className="text-5xl font-bold text-primary mb-3 drop-shadow-lg">2</p>
+              <p className="text-base font-semibold">Especialidades em Engenharia</p>
+              <p className="text-xs text-gray-200 mt-2 font-medium">Civil e Segurança do Trabalho</p>
             </div>
           </div>
         </div>
