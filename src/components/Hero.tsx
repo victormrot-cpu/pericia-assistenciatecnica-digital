@@ -39,7 +39,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-            <Button variant="hero" size="lg" className="text-lg px-10 py-7 animate-pulse shadow-2xl shadow-primary/50 hover:shadow-primary/70 hover:scale-105 transition-all" onClick={scrollToContact}>
+            <Button variant="hero" size="lg" className="text-lg px-10 py-7 shadow-2xl shadow-primary/50 hover:shadow-primary/70 hover:scale-105 transition-all" onClick={scrollToContact}>
               Solicite um Orçamento
             </Button>
             <Button variant="hero-outline" size="lg" className="text-lg px-10 py-7 hover:scale-105 transition-all" onClick={() => document.getElementById('servicos')?.scrollIntoView({

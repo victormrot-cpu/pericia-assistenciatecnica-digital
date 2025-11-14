@@ -11,7 +11,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Scale className="w-8 h-8 text-primary" />
-              <h3 className="text-xl font-bold text-primary">Victor L. Moraes</h3>
+              <h3 className="text-xl font-bold text-primary">Victor Moraes</h3>
             </div>
             <p className="text-primary/80 text-sm">
               Engenheiro Civil e de Segurança do Trabalho. Perícia Judicial e Assistência Técnica.
@@ -58,7 +58,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="border-t border-primary/20 pt-8 text-center text-sm text-primary/80">
-          <p>© {currentYear} Victor L. Moraes - Engenharia Civil e Segurança do Trabalho. Todos os direitos reservados.</p>
+          <p>© {currentYear} Victor Moraes - Engenharia Civil e Segurança do Trabalho. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
