@@ -30,7 +30,7 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-white font-light mb-8">
-            Engenharia Civil & Segurança do Trabalho
+            Engenharia Civil e Segurança do Trabalho
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
