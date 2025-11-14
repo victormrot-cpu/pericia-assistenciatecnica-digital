@@ -1,24 +1,19 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
-
 const Contact = () => {
   const whatsappNumber = "5524988091565";
   const email = "engvictorlmoraes@gmail.com";
   const phone = "(24) 98809-1565";
   const phone2 = "(21) 97299-6243";
-
   const openWhatsApp = () => {
     const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para perícia judicial ou assistência técnica.");
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
-
   const openEmail = () => {
     window.location.href = `mailto:${email}?subject=Solicitação de Orçamento - Perícia Judicial`;
   };
-
-  return (
-    <section id="contato" className="py-20 bg-muted">
+  return <section id="contato" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
@@ -47,12 +42,7 @@ const Contact = () => {
                   <p className="text-lg font-semibold text-foreground">{phone}</p>
                   <p className="text-lg font-semibold text-foreground">{phone2}</p>
                 </div>
-                <Button 
-                  variant="hero" 
-                  size="lg" 
-                  className="w-full"
-                  onClick={openWhatsApp}
-                >
+                <Button variant="hero" size="lg" className="w-full" onClick={openWhatsApp}>
                   Enviar Mensagem
                 </Button>
               </CardContent>
@@ -73,12 +63,7 @@ const Contact = () => {
                 <p className="text-lg font-semibold text-foreground mb-6 break-all">
                   {email}
                 </p>
-                <Button 
-                  variant="hero-outline" 
-                  size="lg" 
-                  className="w-full"
-                  onClick={openEmail}
-                >
+                <Button variant="hero-outline" size="lg" onClick={openEmail} className="w-full bg-amber-500 hover:bg-amber-400 font-sans text-slate-950">
                   Enviar E-mail
                 </Button>
               </CardContent>
@@ -118,8 +103,6 @@ const Contact = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
