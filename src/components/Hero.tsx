@@ -1,32 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Scale, Hammer, Building2 } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
-
 const Hero = () => {
   const scrollToContact = () => {
-    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contato')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   };
-
-  return (
-    <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroBackground})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed'
-      }}
-    >
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroBackground})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundAttachment: 'fixed'
+  }}>
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
           <div className="flex justify-center gap-8 mb-8">
             <Scale className="w-16 h-16 text-primary animate-float" />
-            <Hammer className="w-16 h-16 text-primary animate-float" style={{ animationDelay: '0.2s' }} />
-            <Building2 className="w-16 h-16 text-primary animate-float" style={{ animationDelay: '0.4s' }} />
+            <Hammer className="w-16 h-16 text-primary animate-float" style={{
+            animationDelay: '0.2s'
+          }} />
+            <Building2 className="w-16 h-16 text-primary animate-float" style={{
+            animationDelay: '0.4s'
+          }} />
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold text-primary mb-6 leading-tight">
-            Perícia Judicial & Assistência Técnica
+            Perícia Judicial e Assistência Técnica
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-white font-light mb-8">
@@ -39,20 +39,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
-            <Button 
-              variant="hero" 
-              size="lg" 
-              className="text-lg px-8 py-6"
-              onClick={scrollToContact}
-            >
+            <Button variant="hero" size="lg" className="text-lg px-8 py-6" onClick={scrollToContact}>
               Solicite um Orçamento
             </Button>
-            <Button 
-              variant="hero-outline" 
-              size="lg" 
-              className="text-lg px-8 py-6"
-              onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button variant="hero-outline" size="lg" className="text-lg px-8 py-6" onClick={() => document.getElementById('servicos')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               Conheça os Serviços
             </Button>
           </div>
@@ -76,8 +68,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
