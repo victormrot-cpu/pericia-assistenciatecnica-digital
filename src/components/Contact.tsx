@@ -63,7 +63,7 @@ const Contact = () => {
                 <p className="text-lg font-semibold text-foreground mb-6 break-all">
                   {email}
                 </p>
-                <Button variant="hero-outline" size="lg" onClick={openEmail} className="w-full bg-amber-500 hover:bg-amber-400 font-sans text-slate-950">
+                <Button variant="hero-outline" size="lg" onClick={openEmail} className="w-full font-sans text-slate-950 bg-yellow-600 hover:bg-yellow-500">
                   Enviar E-mail
                 </Button>
               </CardContent>
