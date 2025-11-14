@@ -42,7 +42,7 @@ const Contact = () => {
                   <p className="text-lg font-semibold text-foreground">{phone}</p>
                   <p className="text-lg font-semibold text-foreground">{phone2}</p>
                 </div>
-                <Button variant="hero" size="lg" className="w-full" onClick={openWhatsApp}>
+                <Button variant="hero" size="lg" onClick={openWhatsApp} className="w-full text-slate-950 bg-yellow-600 hover:bg-yellow-500">
                   Enviar Mensagem
                 </Button>
               </CardContent>
