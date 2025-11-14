@@ -42,7 +42,7 @@ const Contact = () => {
                   <p className="text-lg font-semibold text-foreground">{phone}</p>
                   <p className="text-lg font-semibold text-foreground">{phone2}</p>
                 </div>
-                <Button variant="hero" size="lg" onClick={openWhatsApp} className="w-full text-slate-950 bg-yellow-400 hover:bg-yellow-300">
+                <Button variant="hero" size="lg" onClick={openWhatsApp} className="w-full text-slate-950 bg-yellow-500 hover:bg-yellow-400">
                   Enviar Mensagem
                 </Button>
               </CardContent>
@@ -63,7 +63,7 @@ const Contact = () => {
                 <p className="text-lg font-semibold text-foreground mb-6 break-all">
                   {email}
                 </p>
-                <Button variant="hero-outline" size="lg" onClick={openEmail} className="w-full font-sans text-slate-950 bg-yellow-400 hover:bg-yellow-300">
+                <Button variant="hero-outline" size="lg" onClick={openEmail} className="w-full font-sans text-slate-950 bg-yellow-500 hover:bg-yellow-400">
                   Enviar E-mail
                 </Button>
               </CardContent>
