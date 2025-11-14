@@ -10,7 +10,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Victor L. Moraes - Perícia Judicial e Assistência Técnica | Engenheiro Civil</title>
+        <title>Victor Moraes - Perícia Judicial e Assistência Técnica | Engenheiro Civil</title>
         <meta 
           name="description" 
           content="Engenheiro Civil e de Segurança do Trabalho especializado em perícia judicial, assistência técnica e avaliações imobiliárias. Cadastrado no TJRJ, TJSP, TJES e JFRJ. Atendimento em RJ, SP e ES." 
@@ -19,7 +19,7 @@ const Index = () => {
           name="keywords" 
           content="Assistência Técnica Judicial, assistente técnico judicial engenheiro civil, engenheiro perito civil, avaliação judicial de imóvel, Engenharia Segurança do Trabalho, Engenheiro Civil, Engenheiro de Segurança do Trabalho, perícia judicial, laudo técnico, avaliação imobiliária, TJRJ, TJSP, TJES" 
         />
-        <meta name="author" content="Victor L. Moraes" />
+        <meta name="author" content="Victor Moraes" />
         <link rel="canonical" href="https://lovable.dev/projects/1e1ca40e-0b85-4626-bcaa-8c77d2d9d9cb" />
       </Helmet>
       
