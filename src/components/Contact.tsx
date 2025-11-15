@@ -7,7 +7,7 @@ const Contact = () => {
   const phone = "(24) 98809-1565";
   const phone2 = "(21) 97299-6243";
   const openWhatsApp = () => {
-    window.open('https://wa.link/lxn5me', '_blank');
+    window.open(`https://wa.me/${whatsappNumber}`, '_blank');
   };
   const openEmail = () => {
     window.location.href = `mailto:${email}?subject=Solicitação de Orçamento - Perícia Judicial`;
