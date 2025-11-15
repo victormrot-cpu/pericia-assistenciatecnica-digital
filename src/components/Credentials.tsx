@@ -1,9 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award, MapPin, FileCheck } from "lucide-react";
-
 const Credentials = () => {
-  return (
-    <section className="py-20 bg-secondary text-secondary-foreground">
+  return <section className="py-20 bg-secondary text-secondary-foreground">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
@@ -131,18 +129,12 @@ const Credentials = () => {
             <CardContent className="p-8">
               <h3 className="text-2xl font-bold text-primary mb-4">Resumo Profissional</h3>
               <p className="text-lg text-primary/90 leading-relaxed">
-                Experiências em engenharia industrial, na construção civil, em gerenciamento de obras, 
-                na execução de projetos civis e metálicos, na produção de peças metálicas e em supervisão 
-                de equipes. Capacitação técnica em Segurança do Trabalho com especialização pela PUC-MG, 
-                aliando conhecimento prático à fundamentação acadêmica para elaboração de laudos técnicos 
-                precisos e pareceres especializados.
+                Experiência em engenharia industrial e na construção civil, com atuação em gerenciamento de obras, execução de projetos civis e metálicos, produção de estruturas metálicas e supervisão de equipes. Formação técnica em Segurança do Trabalho, com especialização pela PUC-MG, integrando prática profissional e sólida base acadêmica para a elaboração de laudos técnicos precisos e pareceres especializados.
               </p>
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Credentials;
