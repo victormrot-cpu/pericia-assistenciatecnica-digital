@@ -1,16 +1,23 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Linkedin } from "lucide-react";
 const Contact = () => {
   const whatsappNumber = "5524988091565";
   const email = "engvictorlmoraes@gmail.com";
   const phone = "(24) 98809-1565";
   const phone2 = "(21) 97299-6243";
+  const linkedin = "linkedin.com/in/victorlmoraes";
+  
   const openWhatsApp = () => {
     window.open('https://wa.link/lxn5me', '_blank');
   };
+  
   const openEmail = () => {
     window.location.href = `mailto:${email}?subject=Solicitação de Orçamento - Perícia Judicial`;
+  };
+  
+  const openLinkedIn = () => {
+    window.open('https://linkedin.com/in/victorlmoraes', '_blank');
   };
   return <section id="contato" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
@@ -24,7 +31,7 @@ const Contact = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {/* Card WhatsApp */}
             <Card className="hover:shadow-xl transition-all duration-300 bg-card border-2 border-primary/20">
               <CardContent className="p-8">
@@ -62,6 +69,27 @@ const Contact = () => {
                 </p>
                 <Button variant="hero-outline" size="lg" onClick={openEmail} className="w-full font-sans text-slate-950 bg-yellow-500 hover:bg-yellow-400">
                   Enviar E-mail
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Card LinkedIn */}
+            <Card className="hover:shadow-xl transition-all duration-300 bg-card border-2 border-primary/20">
+              <CardContent className="p-8">
+                <div className="flex items-center mb-6">
+                  <div className="bg-primary/10 p-4 rounded-lg mr-4">
+                    <Linkedin className="w-8 h-8 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">LinkedIn</h3>
+                    <p className="text-muted-foreground">Perfil profissional</p>
+                  </div>
+                </div>
+                <p className="text-lg font-semibold text-foreground mb-6 break-all">
+                  {linkedin}
+                </p>
+                <Button variant="hero-outline" size="lg" onClick={openLinkedIn} className="w-full font-sans text-slate-950 bg-yellow-500 hover:bg-yellow-400">
+                  Ver Perfil
                 </Button>
               </CardContent>
             </Card>
