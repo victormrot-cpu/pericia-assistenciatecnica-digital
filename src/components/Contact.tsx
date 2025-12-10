@@ -119,9 +119,9 @@ const Contact = () => {
                     <MapPin className="w-8 h-8 text-primary" />
                   </div>
                   <h4 className="font-bold text-foreground mb-2">Atuação</h4>
-                  <p className="text-sm text-muted-foreground">Rio de Janeiro</p>
-                  <p className="text-sm text-muted-foreground">São Paulo</p>
-                  <p className="text-sm text-muted-foreground">Espírito Santo</p>
+                  <p className="text-sm text-muted-foreground">Rio de Janeiro • São Paulo • Espírito Santo</p>
+                  <p className="text-sm text-muted-foreground">Minas Gerais • Paraná • Santa Catarina</p>
+                  <p className="text-sm text-muted-foreground">Rio Grande do Sul • Distrito Federal</p>
                 </div>
               </div>
             </CardContent>
