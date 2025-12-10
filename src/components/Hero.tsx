@@ -49,14 +49,14 @@ const Hero = () => {
 
           <div className="pt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-white">
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border-2 border-primary/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white/15">
-              <p className="text-5xl font-bold text-primary mb-3 drop-shadow-lg">4</p>
+              <p className="text-5xl font-bold text-primary mb-3 drop-shadow-lg">9</p>
               <p className="text-base font-semibold">Tribunais Cadastrados</p>
-              <p className="text-xs text-gray-200 mt-2 font-medium">TJRJ, TJSP, TJES, JFRJ</p>
+              <p className="text-xs text-gray-200 mt-2 font-medium">TJRJ, TJSP, TJES, JFRJ, TJMG, TJSC, TJPR, TJRS, TJDFT</p>
             </div>
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border-2 border-primary/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white/15">
-              <p className="text-5xl font-bold text-primary mb-3 drop-shadow-lg">3</p>
+              <p className="text-5xl font-bold text-primary mb-3 drop-shadow-lg">8</p>
               <p className="text-base font-semibold">Estados de Atuação</p>
-              <p className="text-xs text-gray-200 mt-2 font-medium">Rio de Janeiro, São Paulo, Espírito Santo</p>
+              <p className="text-xs text-gray-200 mt-2 font-medium">RJ, SP, ES, MG, PR, SC, RS, DF</p>
             </div>
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border-2 border-primary/50 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 hover:bg-white/15">
               <p className="text-5xl font-bold text-primary mb-3 drop-shadow-lg">2</p>

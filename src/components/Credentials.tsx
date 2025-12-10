@@ -146,19 +146,39 @@ const Credentials = () => {
                   <MapPin className="w-8 h-8 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Regiões de Atendimento</h3>
-                  <div className="grid md:grid-cols-3 gap-6 text-primary/90">
+                  <h3 className="text-2xl font-bold text-primary mb-4">Estados de Atendimento</h3>
+                  <div className="grid md:grid-cols-4 gap-6 text-primary/90">
                     <div>
                       <p className="font-semibold text-primary text-lg">Rio de Janeiro</p>
-                      <p className="text-sm">Rio de Janeiro | RJ</p>
+                      <p className="text-sm">RJ</p>
                     </div>
                     <div>
                       <p className="font-semibold text-primary text-lg">São Paulo</p>
-                      <p className="text-sm">São Paulo | SP</p>
+                      <p className="text-sm">SP</p>
                     </div>
                     <div>
-                      <p className="font-semibold text-primary text-lg">Vitória</p>
-                      <p className="text-sm">Vitória | ES</p>
+                      <p className="font-semibold text-primary text-lg">Espírito Santo</p>
+                      <p className="text-sm">ES</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary text-lg">Minas Gerais</p>
+                      <p className="text-sm">MG</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary text-lg">Paraná</p>
+                      <p className="text-sm">PR</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary text-lg">Santa Catarina</p>
+                      <p className="text-sm">SC</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary text-lg">Rio Grande do Sul</p>
+                      <p className="text-sm">RS</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary text-lg">Distrito Federal</p>
+                      <p className="text-sm">DF</p>
                     </div>
                   </div>
                 </div>

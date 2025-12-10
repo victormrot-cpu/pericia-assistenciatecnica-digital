@@ -43,7 +43,7 @@ const Footer = () => {
 
         {/* Registros */}
         <div className="border-t border-primary/20 pt-8 mb-8">
-          <div className="grid md:grid-cols-3 gap-4 text-center text-sm text-primary/80">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm text-primary/80">
             <div>
               <p className="font-semibold text-primary">CREA/RJ: 2021107818</p>
             </div>
@@ -53,7 +53,30 @@ const Footer = () => {
             <div>
               <p className="font-semibold text-primary">CREA/ES: 202501577</p>
             </div>
+            <div>
+              <p className="font-semibold text-primary">CREA/MG: 450913</p>
+            </div>
+            <div>
+              <p className="font-semibold text-primary">CREA/SC: 226274-4</p>
+            </div>
+            <div>
+              <p className="font-semibold text-primary">CREA/PR: 234141</p>
+            </div>
+            <div>
+              <p className="font-semibold text-primary">CREA/RS: RJ21107818</p>
+            </div>
+            <div>
+              <p className="font-semibold text-primary">CREA/DF: 37121/V</p>
+            </div>
           </div>
+        </div>
+
+        {/* Atuação */}
+        <div className="border-t border-primary/20 pt-8 mb-8">
+          <h4 className="text-lg font-bold text-primary mb-4 text-center">Estados de Atuação</h4>
+          <p className="text-center text-sm text-primary/80">
+            Rio de Janeiro • São Paulo • Espírito Santo • Minas Gerais • Paraná • Santa Catarina • Rio Grande do Sul • Distrito Federal
+          </p>
         </div>
 
         {/* Copyright */}
