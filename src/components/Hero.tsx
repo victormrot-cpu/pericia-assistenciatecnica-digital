@@ -28,7 +28,7 @@ const Hero = () => {
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-white font-light mb-6">
-            Engenharia Civil e Segurança do Trabalho
+            Engenheiro Civil e Engenheiro de Segurança do Trabalho Victor Moraes
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto leading-relaxed mb-8">
