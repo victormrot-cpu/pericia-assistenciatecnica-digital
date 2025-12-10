@@ -47,7 +47,7 @@ const Credentials = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-primary mb-4">Registros Profissionais</h3>
-                  <div className="grid md:grid-cols-3 gap-6 text-primary/90">
+                  <div className="grid md:grid-cols-4 gap-6 text-primary/90">
                     <div>
                       <p className="font-semibold text-primary">CREA/RJ</p>
                       <p className="text-sm">2021107818</p>
@@ -59,6 +59,26 @@ const Credentials = () => {
                     <div>
                       <p className="font-semibold text-primary">CREA/ES</p>
                       <p className="text-sm">202501577</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary">CREA/MG</p>
+                      <p className="text-sm">450913</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary">CREA/SC</p>
+                      <p className="text-sm">226274-4</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary">CREA/PR</p>
+                      <p className="text-sm">234141</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary">CREA/RS</p>
+                      <p className="text-sm">RJ21107818</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-primary">CREA/DF</p>
+                      <p className="text-sm">37121/V</p>
                     </div>
                   </div>
                 </div>
@@ -75,7 +95,7 @@ const Credentials = () => {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold text-primary mb-4">Cadastros em Tribunais</h3>
-                  <div className="grid md:grid-cols-2 gap-4 text-primary/90">
+                  <div className="grid md:grid-cols-3 gap-4 text-primary/90">
                     <div className="flex items-center gap-2">
                       <span className="text-primary">✓</span>
                       <span>Tribunal de Justiça do Rio de Janeiro (TJRJ)</span>
@@ -91,6 +111,26 @@ const Credentials = () => {
                     <div className="flex items-center gap-2">
                       <span className="text-primary">✓</span>
                       <span>Justiça Federal do Rio de Janeiro (JFRJ)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">✓</span>
+                      <span>Tribunal de Justiça de Minas Gerais (TJMG)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">✓</span>
+                      <span>Tribunal de Justiça de Santa Catarina (TJSC)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">✓</span>
+                      <span>Tribunal de Justiça do Paraná (TJPR)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">✓</span>
+                      <span>Tribunal de Justiça do Rio Grande do Sul (TJRS)</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-primary">✓</span>
+                      <span>Tribunal de Justiça do Distrito Federal (TJDFT)</span>
                     </div>
                   </div>
                 </div>
