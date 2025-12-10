@@ -2,10 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Scale, Hammer, Building2 } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 const Hero = () => {
-  const scrollToContact = () => {
-    document.getElementById('contato')?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  const openWhatsApp = () => {
+    window.open('https://wa.link/lxn5me', '_blank');
   };
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${heroBackground})`,
@@ -39,7 +37,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center pt-4">
-            <Button variant="hero" size="lg" className="text-lg px-10 py-7 shadow-2xl shadow-primary/50 hover:shadow-primary/70 hover:scale-105 transition-all" onClick={scrollToContact}>
+            <Button variant="hero" size="lg" className="text-lg px-10 py-7 shadow-2xl shadow-primary/50 hover:shadow-primary/70 hover:scale-105 transition-all" onClick={openWhatsApp}>
               Solicite um Orçamento
             </Button>
             <Button variant="hero-outline" size="lg" className="text-lg px-10 py-7 hover:scale-105 transition-all" onClick={() => document.getElementById('servicos')?.scrollIntoView({
