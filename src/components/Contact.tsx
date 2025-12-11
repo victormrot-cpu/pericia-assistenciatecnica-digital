@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, MessageCircle, Linkedin } from "lucide-react";
+
 const Contact = () => {
   const whatsappNumber = "5524988091565";
   const email = "engvictorlmoraes@gmail.com";
@@ -19,115 +20,149 @@ const Contact = () => {
   const openLinkedIn = () => {
     window.open('https://linkedin.com/in/victorlmoraes', '_blank');
   };
-  return <section id="contato" className="py-20 bg-muted">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+
+  const contactMethods = [
+    {
+      icon: MessageCircle,
+      title: "WhatsApp",
+      subtitle: "Resposta imediata",
+      info: [phone, phone2],
+      buttonText: "Enviar Mensagem",
+      onClick: openWhatsApp,
+      primary: true,
+    },
+    {
+      icon: Mail,
+      title: "E-mail",
+      subtitle: "Contato formal",
+      info: [email],
+      buttonText: "Enviar E-mail",
+      onClick: openEmail,
+      primary: false,
+    },
+    {
+      icon: Linkedin,
+      title: "LinkedIn",
+      subtitle: "Perfil profissional",
+      info: [linkedin],
+      buttonText: "Ver Perfil",
+      onClick: openLinkedIn,
+      primary: false,
+    },
+  ];
+
+  return (
+    <section id="contato" className="py-24 md:py-32 bg-muted relative">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/[0.02] to-transparent" />
+      
+      <div className="container mx-auto px-4 relative">
+        {/* Section Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <span className="font-sans text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4 block">
+            Fale Conosco
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6">
             Entre em Contato
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="decorative-line mb-6" />
+          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
             Solicite um orçamento sem compromisso. Atendimento profissional e resposta rápida.
           </p>
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {/* Card WhatsApp */}
-            <Card className="hover:shadow-xl transition-all duration-300 bg-card border-2 border-primary/20">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-primary/10 p-4 rounded-lg mr-4">
-                    <MessageCircle className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">WhatsApp</h3>
-                    <p className="text-muted-foreground">Resposta imediata</p>
-                  </div>
-                </div>
-                <div className="space-y-3 mb-6">
-                  <p className="text-lg font-semibold text-foreground">{phone}</p>
-                  <p className="text-lg font-semibold text-foreground">{phone2}</p>
-                </div>
-                <Button variant="hero" size="lg" onClick={openWhatsApp} className="w-full text-slate-950 bg-yellow-500 hover:bg-yellow-400">Enviar Mensagem</Button>
-              </CardContent>
-            </Card>
+          {/* Contact Methods */}
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            {contactMethods.map((method, index) => {
+              const Icon = method.icon;
+              return (
+                <Card key={index} className="premium-card group overflow-hidden">
+                  <div className="h-1 bg-gradient-to-r from-primary/40 via-primary to-primary/40" />
+                  <CardContent className="p-8">
+                    {/* Header */}
+                    <div className="flex items-center mb-6">
+                      <div className="bg-gradient-to-br from-primary/20 to-primary/5 p-4 rounded-xl mr-4 group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300">
+                        <Icon className="w-7 h-7 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-serif text-2xl font-semibold text-foreground">
+                          {method.title}
+                        </h3>
+                        <p className="font-sans text-sm text-muted-foreground">
+                          {method.subtitle}
+                        </p>
+                      </div>
+                    </div>
 
-            {/* Card Email */}
-            <Card className="hover:shadow-xl transition-all duration-300 bg-card border-2 border-primary/20">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-primary/10 p-4 rounded-lg mr-4">
-                    <Mail className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">E-mail</h3>
-                    <p className="text-muted-foreground">Contato formal</p>
-                  </div>
-                </div>
-                <p className="text-lg font-semibold text-foreground mb-6 break-all">
-                  {email}
-                </p>
-                <Button variant="hero-outline" size="lg" onClick={openEmail} className="w-full font-sans text-slate-950 bg-yellow-500 hover:bg-yellow-400">
-                  Enviar E-mail
-                </Button>
-              </CardContent>
-            </Card>
+                    {/* Info */}
+                    <div className="space-y-1 mb-6 min-h-[56px]">
+                      {method.info.map((info, idx) => (
+                        <p key={idx} className="font-sans text-base font-medium text-foreground break-all">
+                          {info}
+                        </p>
+                      ))}
+                    </div>
 
-            {/* Card LinkedIn */}
-            <Card className="hover:shadow-xl transition-all duration-300 bg-card border-2 border-primary/20">
-              <CardContent className="p-8">
-                <div className="flex items-center mb-6">
-                  <div className="bg-primary/10 p-4 rounded-lg mr-4">
-                    <Linkedin className="w-8 h-8 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">LinkedIn</h3>
-                    <p className="text-muted-foreground">Perfil profissional</p>
-                  </div>
-                </div>
-                <p className="text-lg font-semibold text-foreground mb-6 break-all">
-                  {linkedin}
-                </p>
-                <Button variant="hero-outline" size="lg" onClick={openLinkedIn} className="w-full font-sans text-slate-950 bg-yellow-500 hover:bg-yellow-400">
-                  Ver Perfil
-                </Button>
-              </CardContent>
-            </Card>
+                    {/* Button */}
+                    <Button 
+                      onClick={method.onClick} 
+                      className={`w-full font-sans font-semibold transition-all duration-300 ${
+                        method.primary 
+                          ? 'bg-primary hover:bg-primary-hover text-primary-foreground shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-gold-lg)]'
+                          : 'bg-secondary hover:bg-secondary/90 text-secondary-foreground'
+                      }`}
+                      size="lg"
+                    >
+                      {method.buttonText}
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
 
-          {/* Informações Adicionais */}
-          <Card className="bg-card border-2 border-primary/20">
-            <CardContent className="p-8">
+          {/* Additional Info Card */}
+          <Card className="premium-card overflow-hidden">
+            <div className="h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+            <CardContent className="p-8 md:p-10">
               <div className="grid md:grid-cols-3 gap-8 text-center">
-                <div>
-                  <div className="bg-primary/10 p-4 rounded-lg inline-block mb-4">
-                    <Phone className="w-8 h-8 text-primary" />
+                {/* Phones */}
+                <div className="group">
+                  <div className="bg-gradient-to-br from-primary/15 to-primary/5 p-4 rounded-xl inline-block mb-4 group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
+                    <Phone className="w-7 h-7 text-primary" />
                   </div>
-                  <h4 className="font-bold text-foreground mb-2">Telefones</h4>
-                  <p className="text-sm text-muted-foreground">{phone}</p>
-                  <p className="text-sm text-muted-foreground">{phone2}</p>
+                  <h4 className="font-serif text-lg font-semibold text-foreground mb-3">Telefones</h4>
+                  <p className="font-sans text-sm text-muted-foreground">{phone}</p>
+                  <p className="font-sans text-sm text-muted-foreground">{phone2}</p>
                 </div>
-                <div>
-                  <div className="bg-primary/10 p-4 rounded-lg inline-block mb-4">
-                    <Mail className="w-8 h-8 text-primary" />
+
+                {/* Email */}
+                <div className="group">
+                  <div className="bg-gradient-to-br from-primary/15 to-primary/5 p-4 rounded-xl inline-block mb-4 group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
+                    <Mail className="w-7 h-7 text-primary" />
                   </div>
-                  <h4 className="font-bold text-foreground mb-2">E-mail</h4>
-                  <p className="text-sm text-muted-foreground break-all">{email}</p>
+                  <h4 className="font-serif text-lg font-semibold text-foreground mb-3">E-mail</h4>
+                  <p className="font-sans text-sm text-muted-foreground break-all">{email}</p>
                 </div>
-                <div>
-                  <div className="bg-primary/10 p-4 rounded-lg inline-block mb-4">
-                    <MapPin className="w-8 h-8 text-primary" />
+
+                {/* Location */}
+                <div className="group">
+                  <div className="bg-gradient-to-br from-primary/15 to-primary/5 p-4 rounded-xl inline-block mb-4 group-hover:from-primary/25 group-hover:to-primary/10 transition-all duration-300">
+                    <MapPin className="w-7 h-7 text-primary" />
                   </div>
-                  <h4 className="font-bold text-foreground mb-2">Atuação</h4>
-                  <p className="text-sm text-muted-foreground">Rio de Janeiro • São Paulo • Espírito Santo</p>
-                  <p className="text-sm text-muted-foreground">Minas Gerais • Paraná • Santa Catarina</p>
-                  <p className="text-sm text-muted-foreground">Rio Grande do Sul • Distrito Federal</p>
+                  <h4 className="font-serif text-lg font-semibold text-foreground mb-3">Atuação</h4>
+                  <p className="font-sans text-sm text-muted-foreground">Rio de Janeiro • São Paulo • Espírito Santo</p>
+                  <p className="font-sans text-sm text-muted-foreground">Minas Gerais • Paraná • Santa Catarina</p>
+                  <p className="font-sans text-sm text-muted-foreground">Rio Grande do Sul • Distrito Federal</p>
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;

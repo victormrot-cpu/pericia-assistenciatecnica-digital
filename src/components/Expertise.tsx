@@ -66,39 +66,63 @@ const Expertise = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+      
+      <div className="container mx-auto px-4 relative">
+        {/* Section Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <span className="font-sans text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4 block">
+            Expertise
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6">
             Áreas de Perícia
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="decorative-line mb-6" />
+          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
             Experiência abrangente em diferentes especialidades da engenharia civil e de segurança do trabalho
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {/* Expertise Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
           {expertiseAreas.map((area, index) => {
             const Icon = area.icon;
             return (
               <Card 
                 key={index}
-                className="hover:shadow-xl transition-all duration-300 hover:scale-105 bg-card border border-primary/20"
+                className="premium-card group"
               >
-                <CardContent className="p-6">
-                  <div className="flex items-center mb-4">
-                    <div className="bg-primary/10 p-3 rounded-lg mr-4">
+                <CardContent className="p-6 md:p-8">
+                  {/* Header */}
+                  <div className="flex items-center mb-6">
+                    <div className="bg-gradient-to-br from-primary/20 to-primary/5 p-3.5 rounded-xl mr-4 group-hover:from-primary/30 group-hover:to-primary/10 transition-all duration-300">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground">
+                    <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground">
                       {area.title}
                     </h3>
                   </div>
-                  <ul className="space-y-2">
+
+                  {/* Items */}
+                  <ul className="space-y-3">
                     {area.items.map((item, idx) => (
-                      <li key={idx} className="flex items-start text-sm text-muted-foreground">
-                        <span className="text-primary mr-2 mt-1">✓</span>
-                        <span>{item}</span>
+                      <li key={idx} className="flex items-start group/item">
+                        <div className="w-5 h-5 mr-3 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <svg 
+                            className="w-4 h-4 text-primary/70 group-hover/item:text-primary transition-colors" 
+                            fill="none" 
+                            viewBox="0 0 24 24" 
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <span className="font-sans text-sm text-muted-foreground group-hover/item:text-foreground transition-colors">
+                          {item}
+                        </span>
                       </li>
                     ))}
                   </ul>

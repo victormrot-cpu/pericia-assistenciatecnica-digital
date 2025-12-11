@@ -2,83 +2,85 @@ import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, Award, MapPin, FileCheck } from "lucide-react";
 
 const Credentials = () => {
+  const creaRegistrations = [
+    { state: "RJ", number: "2021107818" },
+    { state: "SP", number: "5071422553" },
+    { state: "ES", number: "202501577" },
+    { state: "MG", number: "450913" },
+    { state: "SC", number: "226274-4" },
+    { state: "PR", number: "234141" },
+    { state: "RS", number: "RJ21107818" },
+    { state: "DF", number: "37121/V" },
+  ];
+
+  const tribunals = [
+    "Tribunal de Justiça do Rio de Janeiro (TJRJ)",
+    "Tribunal de Justiça de São Paulo (TJSP)",
+    "Tribunal de Justiça do Espírito Santo (TJES)",
+    "Justiça Federal do Rio de Janeiro (JFRJ)",
+    "Tribunal de Justiça de Minas Gerais (TJMG)",
+    "Tribunal de Justiça de Santa Catarina (TJSC)",
+    "Tribunal de Justiça do Paraná (TJPR)",
+    "Tribunal de Justiça do Rio Grande do Sul (TJRS)",
+    "Tribunal de Justiça do Distrito Federal (TJDFT)",
+  ];
+
+  const states = [
+    { name: "Rio de Janeiro", abbr: "RJ" },
+    { name: "São Paulo", abbr: "SP" },
+    { name: "Espírito Santo", abbr: "ES" },
+    { name: "Minas Gerais", abbr: "MG" },
+    { name: "Paraná", abbr: "PR" },
+    { name: "Santa Catarina", abbr: "SC" },
+    { name: "Rio Grande do Sul", abbr: "RS" },
+    { name: "Distrito Federal", abbr: "DF" },
+  ];
+
   return (
-    <section className="py-20 bg-secondary text-secondary-foreground">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+    <section className="py-24 md:py-32 bg-secondary text-secondary-foreground relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a227' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      }} />
+      
+      <div className="container mx-auto px-4 relative">
+        {/* Section Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <span className="font-sans text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4 block">
+            Credenciais
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-primary mb-6">
             Qualificações Profissionais
           </h2>
-          <p className="text-xl text-primary/80 max-w-3xl mx-auto">
+          <div className="w-20 h-0.5 bg-gradient-to-r from-primary via-primary to-transparent mx-auto mb-6" />
+          <p className="font-sans text-lg text-secondary-foreground/70 max-w-2xl mx-auto">
             Formação sólida e registro em múltiplos conselhos regionais
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto space-y-8">
-          {/* Formação */}
-          <Card className="bg-card/10 backdrop-blur-sm border-primary/30">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-primary/20 p-4 rounded-lg">
-                  <GraduationCap className="w-8 h-8 text-primary" />
+        <div className="max-w-6xl mx-auto space-y-6">
+          {/* Academic Background */}
+          <Card className="bg-white/5 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors duration-300">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex items-start gap-5">
+                <div className="bg-gradient-to-br from-primary/25 to-primary/10 p-4 rounded-xl flex-shrink-0">
+                  <GraduationCap className="w-7 h-7 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Formação Acadêmica</h3>
-                  <div className="space-y-3 text-primary/90">
-                    <p className="text-lg">
-                      <strong>Especialista em Engenharia de Segurança do Trabalho</strong>
-                    </p>
-                    <p>Pontifícia Universidade Católica de Minas Gerais (PUC-MG)</p>
-                    <p className="mt-2">
-                      <strong>Graduação em Engenharia Civil</strong>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Registros */}
-          <Card className="bg-card/10 backdrop-blur-sm border-primary/30">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-primary/20 p-4 rounded-lg">
-                  <FileCheck className="w-8 h-8 text-primary" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Registros Profissionais</h3>
-                  <div className="grid md:grid-cols-4 gap-6 text-primary/90">
+                  <h3 className="font-serif text-2xl font-semibold text-primary mb-5">Formação Acadêmica</h3>
+                  <div className="space-y-4">
                     <div>
-                      <p className="font-semibold text-primary">CREA/RJ</p>
-                      <p className="text-sm">2021107818</p>
+                      <p className="font-sans font-semibold text-secondary-foreground text-lg">
+                        Especialista em Engenharia de Segurança do Trabalho
+                      </p>
+                      <p className="font-sans text-secondary-foreground/70">
+                        Pontifícia Universidade Católica de Minas Gerais (PUC-MG)
+                      </p>
                     </div>
                     <div>
-                      <p className="font-semibold text-primary">CREA/SP</p>
-                      <p className="text-sm">5071422553</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary">CREA/ES</p>
-                      <p className="text-sm">202501577</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary">CREA/MG</p>
-                      <p className="text-sm">450913</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary">CREA/SC</p>
-                      <p className="text-sm">226274-4</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary">CREA/PR</p>
-                      <p className="text-sm">234141</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary">CREA/RS</p>
-                      <p className="text-sm">RJ21107818</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary">CREA/DF</p>
-                      <p className="text-sm">37121/V</p>
+                      <p className="font-sans font-semibold text-secondary-foreground text-lg">
+                        Graduação em Engenharia Civil
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -86,111 +88,93 @@ const Credentials = () => {
             </CardContent>
           </Card>
 
-          {/* Cadastros Tribunais */}
-          <Card className="bg-card/10 backdrop-blur-sm border-primary/30">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-primary/20 p-4 rounded-lg">
-                  <Award className="w-8 h-8 text-primary" />
+          {/* Professional Registrations */}
+          <Card className="bg-white/5 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors duration-300">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex items-start gap-5">
+                <div className="bg-gradient-to-br from-primary/25 to-primary/10 p-4 rounded-xl flex-shrink-0">
+                  <FileCheck className="w-7 h-7 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Cadastros em Tribunais</h3>
-                  <div className="grid md:grid-cols-3 gap-4 text-primary/90">
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Tribunal de Justiça do Rio de Janeiro (TJRJ)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Tribunal de Justiça de São Paulo (TJSP)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Tribunal de Justiça do Espírito Santo (TJES)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Justiça Federal do Rio de Janeiro (JFRJ)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Tribunal de Justiça de Minas Gerais (TJMG)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Tribunal de Justiça de Santa Catarina (TJSC)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Tribunal de Justiça do Paraná (TJPR)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Tribunal de Justiça do Rio Grande do Sul (TJRS)</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-primary">✓</span>
-                      <span>Tribunal de Justiça do Distrito Federal (TJDFT)</span>
-                    </div>
+                  <h3 className="font-serif text-2xl font-semibold text-primary mb-5">Registros Profissionais</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {creaRegistrations.map((reg, index) => (
+                      <div 
+                        key={index} 
+                        className="bg-primary/5 border border-primary/15 rounded-lg p-4 hover:border-primary/30 transition-colors"
+                      >
+                        <p className="font-sans text-xs text-secondary-foreground/50 uppercase tracking-wider">CREA/{reg.state}</p>
+                        <p className="font-sans text-sm font-semibold text-primary mt-1">{reg.number}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          {/* Localidades */}
-          <Card className="bg-card/10 backdrop-blur-sm border-primary/30">
-            <CardContent className="p-8">
-              <div className="flex items-start gap-4">
-                <div className="bg-primary/20 p-4 rounded-lg">
-                  <MapPin className="w-8 h-8 text-primary" />
+          {/* Tribunal Registrations */}
+          <Card className="bg-white/5 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors duration-300">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex items-start gap-5">
+                <div className="bg-gradient-to-br from-primary/25 to-primary/10 p-4 rounded-xl flex-shrink-0">
+                  <Award className="w-7 h-7 text-primary" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-primary mb-4">Estados de Atendimento</h3>
-                  <div className="grid md:grid-cols-4 gap-6 text-primary/90">
-                    <div>
-                      <p className="font-semibold text-primary text-lg">Rio de Janeiro</p>
-                      <p className="text-sm">RJ</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary text-lg">São Paulo</p>
-                      <p className="text-sm">SP</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary text-lg">Espírito Santo</p>
-                      <p className="text-sm">ES</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary text-lg">Minas Gerais</p>
-                      <p className="text-sm">MG</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary text-lg">Paraná</p>
-                      <p className="text-sm">PR</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary text-lg">Santa Catarina</p>
-                      <p className="text-sm">SC</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary text-lg">Rio Grande do Sul</p>
-                      <p className="text-sm">RS</p>
-                    </div>
-                    <div>
-                      <p className="font-semibold text-primary text-lg">Distrito Federal</p>
-                      <p className="text-sm">DF</p>
-                    </div>
+                  <h3 className="font-serif text-2xl font-semibold text-primary mb-5">Cadastros em Tribunais</h3>
+                  <div className="grid md:grid-cols-3 gap-3">
+                    {tribunals.map((tribunal, index) => (
+                      <div key={index} className="flex items-center gap-3 group">
+                        <svg 
+                          className="w-4 h-4 text-primary/70 flex-shrink-0 group-hover:text-primary transition-colors" 
+                          fill="none" 
+                          viewBox="0 0 24 24" 
+                          stroke="currentColor"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="font-sans text-sm text-secondary-foreground/80 group-hover:text-secondary-foreground transition-colors">
+                          {tribunal}
+                        </span>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          {/* Resumo Profissional */}
-          <Card className="bg-card/10 backdrop-blur-sm border-primary/30">
-            <CardContent className="p-8">
-              <h3 className="text-2xl font-bold text-primary mb-4">Resumo Profissional</h3>
-              <p className="text-lg text-primary/90 leading-relaxed">
+          {/* Service States */}
+          <Card className="bg-white/5 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors duration-300">
+            <CardContent className="p-8 md:p-10">
+              <div className="flex items-start gap-5">
+                <div className="bg-gradient-to-br from-primary/25 to-primary/10 p-4 rounded-xl flex-shrink-0">
+                  <MapPin className="w-7 h-7 text-primary" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="font-serif text-2xl font-semibold text-primary mb-5">Estados de Atendimento</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {states.map((state, index) => (
+                      <div 
+                        key={index} 
+                        className="bg-primary/5 border border-primary/15 rounded-lg p-4 hover:border-primary/30 transition-colors text-center"
+                      >
+                        <p className="font-serif font-semibold text-primary text-lg">{state.name}</p>
+                        <p className="font-sans text-xs text-secondary-foreground/50 mt-1">{state.abbr}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Professional Summary */}
+          <Card className="bg-white/5 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-colors duration-300">
+            <div className="h-1 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+            <CardContent className="p-8 md:p-10">
+              <h3 className="font-serif text-2xl font-semibold text-primary mb-5">Resumo Profissional</h3>
+              <p className="font-sans text-base text-secondary-foreground/80 leading-relaxed">
                 Experiências em engenharia industrial, na construção civil, em gerenciamento de obras, 
                 na execução de projetos civis e metálicos, na produção de peças metálicas e em supervisão 
                 de equipes. Capacitação técnica em Segurança do Trabalho com especialização pela PUC-MG, 

@@ -41,44 +41,73 @@ const Services = () => {
   ];
 
   return (
-    <section id="servicos" className="py-20 bg-muted">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+    <section id="servicos" className="py-24 md:py-32 bg-muted relative">
+      {/* Subtle top gradient */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-secondary/5 to-transparent" />
+      
+      <div className="container mx-auto px-4 relative">
+        {/* Section Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <span className="font-sans text-sm font-semibold text-primary uppercase tracking-[0.2em] mb-4 block">
+            O que oferecemos
+          </span>
+          <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-6">
             Serviços Especializados
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="decorative-line mb-6" />
+          <p className="font-sans text-lg text-muted-foreground max-w-2xl mx-auto">
             Expertise técnica aliada ao conhecimento jurídico para laudos e pareceres de excelência
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <Card 
               key={index}
-              className="hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card border-2 border-primary/20"
+              className="premium-card group overflow-hidden"
             >
-              <CardContent className="p-8">
-                <div className="mb-6">
-                  <img 
-                    src={service.icon} 
-                    alt={service.title}
-                    className="w-24 h-24 mx-auto"
-                  />
+              {/* Gold accent top */}
+              <div className="h-1 bg-gradient-to-r from-primary/60 via-primary to-primary/60" />
+              
+              <CardContent className="p-8 md:p-10">
+                {/* Icon */}
+                <div className="mb-8 flex justify-center">
+                  <div className="relative">
+                    <div className="absolute inset-0 bg-primary/10 blur-2xl rounded-full scale-150 group-hover:bg-primary/20 transition-all duration-500" />
+                    <img 
+                      src={service.icon} 
+                      alt={service.title}
+                      className="w-20 h-20 md:w-24 md:h-24 relative z-10 group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
+
+                {/* Title */}
+                <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-4 text-center">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 text-center leading-relaxed">
+
+                {/* Description */}
+                <p className="font-sans text-muted-foreground mb-8 text-center leading-relaxed">
                   {service.description}
                 </p>
-                <div className="border-t border-primary/20 pt-6">
-                  <h4 className="font-semibold text-foreground mb-3">Áreas de atuação:</h4>
-                  <ul className="space-y-2">
+
+                {/* Divider */}
+                <div className="w-full h-px bg-gradient-to-r from-transparent via-border to-transparent mb-6" />
+
+                {/* Areas */}
+                <div>
+                  <h4 className="font-sans font-semibold text-foreground mb-4 text-sm uppercase tracking-wider">
+                    Áreas de atuação
+                  </h4>
+                  <ul className="space-y-3">
                     {service.areas.map((area, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <span className="text-primary mr-2">•</span>
-                        <span className="text-sm text-muted-foreground">{area}</span>
+                      <li key={idx} className="flex items-start group/item">
+                        <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0 group-hover/item:scale-125 transition-transform" />
+                        <span className="font-sans text-sm text-muted-foreground group-hover/item:text-foreground transition-colors">
+                          {area}
+                        </span>
                       </li>
                     ))}
                   </ul>
